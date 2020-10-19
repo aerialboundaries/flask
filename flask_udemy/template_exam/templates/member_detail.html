@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block content %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/base.css')}}">
+<div class="row">
+    <dif class="col-lg-8 offset-lg-2">
+        <img src="{{ url_for('static', filename=member.picture_path) }}" alt="">
+        <ul>
+            <li>名前: {{member.name}}</li>
+            <li>年齢: {{member.age}}</li>
+            <li>性別: {{member.gender}}</li>
+            <li>学部: {{member.major}}</li>
+        </ul>
+    </dif>
+</div>
+{% endblock content %}
