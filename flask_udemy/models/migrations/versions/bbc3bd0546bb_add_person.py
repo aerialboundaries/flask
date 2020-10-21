@@ -1,8 +1,8 @@
-"""Add Person
+"""add Person
 
-Revision ID: 44df7c2b4a5c
+Revision ID: bbc3bd0546bb
 Revises: 
-Create Date: 2020-10-20 15:56:54.526844
+Create Date: 2020-10-21 01:28:52.673417
 
 """
 from alembic import op
@@ -10,7 +10,7 @@ import sqlalchemy as sa
 
 
 # revision identifiers, used by Alembic.
-revision = '44df7c2b4a5c'
+revision = 'bbc3bd0546bb'
 down_revision = None
 branch_labels = None
 depends_on = None
