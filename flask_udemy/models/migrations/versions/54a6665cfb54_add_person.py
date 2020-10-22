@@ -1,8 +1,8 @@
 """add Person
 
-Revision ID: bbc3bd0546bb
+Revision ID: 54a6665cfb54
 Revises: 
-Create Date: 2020-10-21 01:28:52.673417
+Create Date: 2020-10-21 23:42:03.032426
 
 """
 from alembic import op
@@ -10,7 +10,7 @@ import sqlalchemy as sa
 
 
 # revision identifiers, used by Alembic.
-revision = 'bbc3bd0546bb'
+revision = '54a6665cfb54'
 down_revision = None
 branch_labels = None
 depends_on = None
@@ -21,6 +21,7 @@ def upgrade():
     op.create_table('persons',
     sa.Column('id', sa.Integer(), nullable=False),
     sa.Column('name', sa.Text(), nullable=True),
+    sa.Column('gender', sa.Text(), nullable=True),
     sa.Column('age', sa.Integer(), nullable=True),
     sa.PrimaryKeyConstraint('id')
     )
