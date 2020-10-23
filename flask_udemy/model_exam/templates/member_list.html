@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% block content %}
+  <a href="{{url_for('create_member')}}">メンバーの作成</a>
+  <div>
+    <h1>メンバー一覧</h1>
+    <table>
+      <tr>
+        <th>名前</th>
+        <th>年齢</th>
+        <th>コメント</th>
+        <th>削除ボタン</th>
+      </tr>
+      {% for member in members %}
+      <tr>
+        <td>{{member.name}}</td>
+        <td>{{member.age}}</td>
+        <td>{{member.commnent}}</td>
+        <td>
+          <form method="POST" action="{{url_for('delete_member')}}">
+            {{form.crsf_token}}
+            {{form.id(value=member.id)}}
+            {{form.submit()}}
+          </form> 
+        </td>
+      </tr>
+      {% endfor %}
+    </table>
+  </div>
+{% endblock content %}
