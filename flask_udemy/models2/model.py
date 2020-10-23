@@ -36,8 +36,8 @@ class Person(db.Model):
         self.update_at = update_at
 
 
-def __str__(self):
-    return f"id = {self.id}, name={self.name}, phone_number={self.phone_number}, age={self.age}, create_at={self.create_at}, update_at={self.update_at}"
+    def __str__(self):
+        return f"id = {self.id}, name={self.name}, phone_number={self.phone_number}, age={self.age}, create_at={self.create_at}, update_at={self.update_at}"
 
 
 db.Index("my_index", func.lower(Person.name))  # lower(name)
