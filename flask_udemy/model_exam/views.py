@@ -5,8 +5,8 @@ from app import app
 
 
 @app.route('/')
-@app.route('/members_list')
-def members_list():
+@app.route('/member_list')
+def member_list():
     # メンバー一覧表示
     members = Member.query.all()
     form = DeleteForm(request.form)

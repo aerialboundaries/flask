@@ -12,9 +12,10 @@
       </tr>
       {% for member in members %}
       <tr>
-        <td>{{member.name}}</td>
+        <td><a href="{{url_for('update_member', member_id=member.id)}}">
+            {{member.name}}</a></td>
         <td>{{member.age}}</td>
-        <td>{{member.commnent}}</td>
+        <td>{{member.comment}}</td>
         <td>
           <form method="POST" action="{{url_for('delete_member')}}">
             {{form.crsf_token}}
